@@ -228,7 +228,7 @@ button:hover{
     padding: 0;
     width: 100%;
     height:100vh;
-    overflow-y:scroll;
+    overflow-y:hidden;
 }
  .sundance .headline-1, .sundance .headline-2, .sundance .headline-3, .sundance .headline-4, .sundance .headline-5, .sundance .headline-6 {
 	 font-family: benton-sans, Helvetica, sans-serif;
