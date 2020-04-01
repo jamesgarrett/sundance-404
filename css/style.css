@@ -19,8 +19,9 @@ header{
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9;
+  z-index: 999;
   width: 100%;
+  background:rgba(0,0,0,0.6);
   display: grid;
   grid-template-columns: 50% 50%;
   padding: 1vw;
@@ -65,12 +66,21 @@ footer > .icons{
   align-self: center;
 }
 
+.icon img{opacity:.8}
+.icon:hover img{opacity:1;}
+
 footer > .nav {grid-area: nav;}
 footer > .nav li {display: inline-flex;}
-footer > .nav li a{color:white;}
+footer > .nav li a, header > .nav li a {color:white;}
+footer > .nav li a:hover, header > .nav li a:hover{color:var(--brand-primary)}
 
 footer > .logo-train{
   grid-area: logo-train;
+}
+
+footer > .logo-train img{
+  width: 100%;
+  max-width: 640px;
 }
 
 footer > .copyright{
@@ -129,14 +139,8 @@ button:hover{
 
 
 @media screen and (max-width: 960px) {
-  .main-nav {
- 	 background-color: none;
- }
-  .main-nav div.logo{
-    height:25px;
-  }
-  .main-nav div.logo img{
-    height:25px;
+  footer > .logo img, header > .logo img{
+    height: 24px;
   }
   .background {
     grid-template-columns: 1fr;
@@ -242,6 +246,8 @@ button:hover{
 	 --m: 1rem;
 	 --m-small: 0.25rem;
 	 --m-large: 2rem;
+   /* colors */
+   --brand-primary: #ed6300;
 }
 
  h1, h2, h3, h4, h5, h6 {
