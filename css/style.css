@@ -1,14 +1,91 @@
+/* Navigation Layout */
+
+ p, a, li {
+	 font-family: var(--font-primary);
+	 text-decoration: none;
+	 list-style-type: none;
+}
+ ul {
+	 padding-left: 0;
+}
+ body {
+	 margin: 0;
+   background:#000;
+}
+
+/* header layout */
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 1vw;
+  box-sizing: border-box;
+  grid-template-areas:
+    "logo nav";
+}
+
+header > .nav{
+  grid-area: nav;
+  justify-self: flex-end;
+  align-self: center;
+}
+
+/* footer layout */
+
+footer {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: 4em auto auto;
+  padding: 2vw;
+  grid-template-areas:
+      "logo icons"
+      "nav nav"
+      "logo-train logo-train"
+      "copyright copyright";
+}
+
+footer > .logo, header > .logo{
+  grid-area: logo;
+  justify-self: flex-start;
+  align-self: center;
+}
+
+footer > .logo img, header > .logo img{
+  height: 36px;
+}
+
+footer > .icons{
+  grid-area: icons;
+  justify-self: flex-end;
+  align-self: center;
+}
+
+footer > .nav {grid-area: nav;}
+footer > .nav li {display: inline-flex;}
+footer > .nav li a{color:white;}
+
+footer > .logo-train{
+  grid-area: logo-train;
+}
+
+footer > .copyright{
+  grid-area: copyright;
+  color:white;
+}
+
 /* 404 Page Layout */
 
 .background, .gradient{
   height: 100vh;
   width: 100%;
   display: grid;
-  position: fixed;
+  position: absolute;
   grid-template-columns: 3fr 9fr;
-}
-ul.dropdown-items {
-    min-width: 200px;
 }
 .gradient{
   grid-template-columns: 3fr 3fr 6fr;
@@ -96,56 +173,13 @@ button:hover{
   }
 }
 
-/* Navigation Layout */
-
-.main-nav, .browse-nav {
-	 display: flex;
-	 position: fixed;
-	 top: 0;
-	 width: 100%;
-	 color: #999;
-}
- .main-nav a, .browse-nav a {
-	 color: white;
-}
- .main-nav a:hover, .browse-nav a:hover {
-	 color: #e15d00;
-}
- .main-nav {
-	 background-color: rgba(0,0,0,0.6);
-	 height: 65px;
-	 align-items: center;
-	 justify-content: space-between;
-	 z-index: 9999;
-   transition:1s ease-in-out;
-}
- .main-nav .logo {
-	 height: 35px;
-}
- .main-nav .left, .main-nav .right {
-	 display: flex;
-	 align-items: center;
-	 padding: 1rem;
-}
- p, a, li {
-	 font-family: var(--font-primary);
-	 text-decoration: none;
-	 list-style-type: none;
-}
- ul {
-	 padding-left: 0;
-}
- body {
-	 margin: 0;
-   background:#000;
-}
+/* typography */
 
 .sundance{
     margin: 0;
     padding: 0;
     width: 100%;
     height:100vh;
-    overflow-y:hidden;
 }
 
  .sundance .headline-1 {
@@ -164,7 +198,7 @@ button:hover{
 	 letter-spacing: 1px;
 }
 
-.sundance .button-md{
+.sundance .button-md, .sundance .button-sm{
 	 font-family: benton-sans, Helvetica, sans-serif;
 	 text-transform: uppercase;
 	 font-weight: 700;
