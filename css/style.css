@@ -49,7 +49,7 @@ footer > .icons{
   align-self: center;
 }
 
-.icon img{opacity:.8}
+.icon img{opacity:.8;width:1.5rem;}
 .icon:hover img{opacity:1;}
 
 footer > .nav {grid-area: nav;}
