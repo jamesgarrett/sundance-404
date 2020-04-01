@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Page Not Found | Sundance TV</title>
+    <meta name="author" content="SundanceTV">
+    <meta name="description" content="The page you requested was not found. Enjoy the latest shows, movies and shorts on the Sundance TV homepage.">
+    <meta name="keywords" content="sundancetv, tv, movies, shows">
+    <!-- Typekit import for our fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/phe0eyb.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <div class="sundance">
+      <header class="main-nav">
+        <div class="left">
+          <!--    Button for Menu Toggle    -->
+          <button class="menu-toggle m-h" id="menuToggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+              <rect id="bottom" fill="#FFFFFF" x="0" y="30" width="36" height="2"></rect>
+              <rect id="middle-1" fill="#FFFFFF" x="0" y="18" width="36" height="2"></rect>
+              <rect id="middle-2" fill="#FFFFFF" x="0" y="18" width="36" height="2"></rect>
+              <rect id="top" fill="#FFFFFF" x="0" y="6" width="36" height="2"></rect>
+            </svg>
+          </button>
+          <!--   Network Logo     -->
+          <div class="logo m-r m-lg">
+            <a href="#"><img src="https://cdn.amcnetworks.com/sundance/logos/sundance_tv_logo.png" alt="" class="logo"></a>
+          </div>
+          <!--   Primary Nav    -->
+          <ul class="hidden-sm">
+            <li><a class="button-md" href="/#">Schedule</a></li>
+          </ul>
+        </div>
+        <!--  Authentication   -->
+        <div class="right">
+          <div class="button-md">
+            <a href="#">Sign In</a>
+          </div>
+        </div>
+      </header>
+       <!--   Browse Nav     -->
+       <div class="hidden browse-nav" id="browseToggle">
+           <!--   Secondary Nav Links     -->
+            <ul class="dropdown-items m-h">
+              <li class="m-b"><a class="button-md m-l" href="/#">All Shows</a></li>
+              <li class="m-b"><a class="button-md m-l" href="/#">Full Episodes</a></li>
+              <li class="m-b"><a class="button-md m-l" href="/#">Movies</a></li>
+              <li class="m-b"><a class="button-md m-l" href="/#">Schedule</a></li>
+            </ul>
+            <!--   Featured Shows Slider     -->
+            <ul class="dropdown-slider hidden-sm">
+              <li class="slider-item m-r">
+                 <a href=""><img src="https://images.amcnetworks.com/sundancechannel.com/wp-content/uploads/2019/01/STV_SOTU_dropdown_400x600_F-200x300.jpg" alt=""></a>
+                <h6 class="label-xs">8 Full Episodes & Extras</h6>
+              </li>
+              <li class="slider-item m-r"><img src="https://images.amcnetworks.com/sundancechannel.com/wp-content/uploads/2019/12/Dropdown-nav-poster-V2-200x300.jpg" alt="">
+                <h6 class="label-xs">8 Full Episodes & Extras</h6>
+              </li>
+              <li class="slider-item m-r"><img src="https://images.amcnetworks.com/sundancechannel.com/wp-content/uploads/2019/12/sundance-bbc-america-seven-worlds-one-planet-season-1-S1-key-art-400x600-200x300.jpg" alt="">
+                <h6 class="label-xs">8 Full Episodes & Extras</h6>
+              </li>
+              <li><img src="" alt=""></li>
+            </ul>
+          </div>
+      <main>
+        <div class="background bg-black">
+          <span class="spacer"></span>
+          <span class="background--image"></span>
+        </div>
+        <span class="gradient">
+          <span class="bg-black"></span>
+          <span class="gradient--layer"></span>
+          <span class="spacer"></span>
+        </span>
+        <div class="content m-l">
+          <span class="label-lg m-l">ERROR - 404</span>
+          <h1 class="headline-1 m-l">Well, that didn't work.</h1>
+          <span class="body-lg m-b m-l">The page you requested could not be found.</span>
+          <a href="sundancetv.com"><button class="button-md m-l">Return to Home</button></a>
+          <span class="spacer"></span>
+        </div>
+
+      </main>
+      <div class="footer m-l">
+        <div class="left">
+          <div class="logo m-h" style="height:25px;">
+            <a href="#"><img style="height:25px;" src="https://cdn.amcnetworks.com/sundance/logos/sundance_tv_logo.png" alt="" class="logo"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script>
+        $("#menuToggle").click(function(){
+          $(".main-nav").toggleClass("open");
+          $("#browseToggle").toggleClass("hidden");
+         $("#menuToggle").toggleClass("clicked");
+        });
+      </script>
+    </footer>
+
+  </body>
+</html>
