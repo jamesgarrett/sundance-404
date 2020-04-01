@@ -1,27 +1,10 @@
-/* Navigation Layout */
-
- p, a, li {
-	 font-family: var(--font-primary);
-	 text-decoration: none;
-	 list-style-type: none;
-}
- ul {
-	 padding-left: 0;
-}
- body {
-	 margin: 0;
-   background:#000;
-}
-
 /* header layout */
 
 header{
   position: fixed;
-  top: 0;
-  left: 0;
   z-index: 999;
   width: 100%;
-  background:rgba(0,0,0,0.6);
+  background: black;
   display: grid;
   grid-template-columns: 50% 50%;
   padding: 1vw;
@@ -86,6 +69,17 @@ footer > .logo-train img{
 footer > .copyright{
   grid-area: copyright;
   color:white;
+}
+
+/* General Classes */
+
+ p, a, li {
+	 font-family: var(--font-primary);
+	 text-decoration: none;
+	 list-style-type: none;
+}
+ ul {
+	 padding-left: 0;
 }
 
 /* 404 Page Layout */
@@ -179,50 +173,104 @@ button:hover{
 
 /* typography */
 
-.sundance{
+
+	body{
+	  font-family: var(--font-primary);
     margin: 0;
-    padding: 0;
-    width: 100%;
-    height:100vh;
-}
+    background:#000;
+	}
 
- .sundance .headline-1 {
-	 font-size: var(--fs10);
-   font-family: benton-sans, Helvetica, sans-serif;
-   font-weight: 300;
-   text-transform: lowercase;
-   line-height: 1.08;
-}
+	h1, h2, h3, h4, h5, h6, .display-primary, .display-primary-6, .display-primary-5, .display-primary-4, .display-primary-3, .display-primary-2, .display-primary-1, .display-primary-0{
+	  font-family: var(--font-primary);
+	  font-weight: 300;
+	  text-transform: lowercase;
+	  letter-spacing: 0;
+	  line-height: 1.08;
+	}
 
- .sundance .label-lg {
-	 font-family: benton-sans, Helvetica, sans-serif;
-	 font-weight: 400;
-	 line-height: 1.5;
-	 text-transform: uppercase;
-	 letter-spacing: 1px;
-}
+	h1, .display-primary-6 {font-size: var(--fs10);}
+	h2, .display-primary-5 {font-size: var(--fs09);}
+	h3, .display-primary-4 {font-size: var(--fs07);}
+	h4, .display-primary-3 {font-size: var(--fs05);}
+	h5, .display-primary-2 {font-size: var(--fs04);}
+	h6, .display-primary-1 {font-size: var(--fs02);}
+	.display-primary-0 {font-size: var(--fs01);}
 
-.sundance .button-md, .sundance .button-sm{
-	 font-family: benton-sans, Helvetica, sans-serif;
-	 text-transform: uppercase;
-	 font-weight: 700;
-	 letter-spacing: 1.5px;
-}
+	.display-secondary, .display-secondary-6, .display-secondary-5, .display-secondary-4, .display-secondary-3, .display-secondary-2, .display-secondary-1, .display-secondary-0{
+	  font-family: var(--font-secondary);
+	  font-weight: 400;
+	  text-transform: uppercase;
+	  line-height: 1;
+	}
 
-.sundance .button-md, .sundance .body-md {
-	 font-size: var(--fs02);
-}
+	.display-secondary-6{font-size: var(--fs13);}
+	.display-secondary-5{font-size: var(--fs10);}
+	.display-secondary-4{font-size: var(--fs09);}
+	.display-secondary-3{font-size: var(--fs07);}
+	.display-secondary-2{font-size: var(--fs05);}
+	.display-secondary-1{font-size: var(--fs04);}
+	.display-secondary-0{font-size: var(--fs02);}
 
- .sundance .body, .sundance .body-xs, .sundance .body-sm, .sundance .body-md, .sundance .body-lg, .sundance .body-xl {
-	 font-family: benton-sans, Helvetica, sans-serif;
-	 font-weight: 400;
-	 font-style: normal;
-	 line-height: 1.43;
-	 letter-spacing: normal;
-}
- .sundance .body-lg, .sundance .label-lg {
-	 font-size: var(--fs04);
-}
+	.display-tertiary, .display-tertiary-1, .display-tertiary-2, .display-tertiary-3, .display-tertiary-4, .display-tertiary-5, .display-tertiary-6{
+	  font-family: var(--font-primary);
+	  font-weight: 400;
+	  text-transform: capitalize;
+	  line-height: 1.08;
+	}
+
+	.display-tertiary-6{font-size: var(--fs10);}
+	.display-tertiary-5{font-size: var(--fs09);}
+	.display-tertiary-4{font-size: var(--fs07);}
+	.display-tertiary-3{font-size: var(--fs05);}
+	.display-tertiary-2{font-size: var(--fs04);}
+	.display-tertiary-1{font-size: var(--fs02);}
+	.display-tertiary-0{font-size: var(--fs01);}
+
+	.label, .label-lg, .label-md, .label-sm, .label-xs, .label-primary, .label-primary-lg, .label-primary-md, .label-primary-sm, .label-primary-xs, .label-secondary-lg, .label-secondary-md, .label-secondary-sm, .label-secondary-xs{
+	  font-family: var(--font-primary);
+	  font-weight: 400;
+	  line-height: 1.5;
+	  text-transform: uppercase;
+	  letter-spacing: 1px;
+	}
+
+	.label-primary, .label-primary-lg, .label-primary-md, .label-primary-sm, .label-primary-xs{
+	  text-transform: uppercase;
+	}
+
+	.label-secondary, .label-secondary-lg, .label-secondary-md, .label-secondary-sm, .label-secondary-xs{
+	  text-transform: capitalize;
+	}
+
+	.button, .button-lg, .button-md, .button-sm, .button-xs{
+		font-family: var(--font-primary);
+		text-transform: uppercase;
+		font-weight:700;
+		letter-spacing:1.5px;
+	}
+
+	.label-lg, .label-primary-lg, .label-secondary-lg, .button-lg {font-size: var(--fs04);}
+	.label-md, .label-primary-md, .label-secondary-md, .button-md {font-size: var(--fs02);}
+	.label-sm, .label-primary-sm, .label-secondary-sm, .button-sm {font-size: var(--fs01);}
+	.label-xs, .label-primary-xs, .label-secondary-xs, .button-xs {font-size: var(--fs00);}
+
+	body, p, .body, .body-xs, .body-sm, .body-md, .body-lg, .body-xl{
+	  font-family: var(--font-primary);
+	  font-weight: 400;
+	  font-style: normal;
+	  line-height: 1.43;
+	  letter-spacing: normal;
+	}
+
+	.body-xl {font-size: var(--fs07);}
+	.body-lg, .body-link-lg {font-size: var(--fs04);}
+	.body-md, .body-link-md, p {font-size: var(--fs02);}
+	.body-sm, .body-link-sm {font-size: var(--fs01);}
+	.body-xs, .body-link-xs {font-size: var(--fs00);}
+
+	.body-link, .body-link-xl, .body-link-lg, .body-link-md, .body-link-sm, .body-link-xs{
+		color: var(--brand-primary);
+	}
 
  :root {
 	/* font sizing */
@@ -246,8 +294,10 @@ button:hover{
 	 --m: 1rem;
 	 --m-small: 0.25rem;
 	 --m-large: 2rem;
-   /* colors */
+   /* branding */
    --brand-primary: #ed6300;
+   --font-primary: benton-sans, Helvetica, sans-serif;
+   --font-secondary: benton-sans-extra-compressed, oswald, Helvetica, sans-serif;
 }
 
  h1, h2, h3, h4, h5, h6 {
@@ -283,16 +333,16 @@ button:hover{
  .m-a {
 	 margin: var(--m);
 }
- .m-t, .m-v {
+ .m-t, .m-y {
 	 margin-top: var(--m);
 }
- .m-b, .m-v {
+ .m-b, .m-y {
 	 margin-bottom: var(--m);
 }
- .m-l, .m-h {
+ .m-l, .m-x {
 	 margin-left: var(--m);
 }
- .m-r, .m-h {
+ .m-r, .m-x {
 	 margin-right: var(--m);
 }
 /* margin sizing m-sm = used in conjunction with a location, specifies a margin of .25rem m-lg = used in conjunction with a location, specifies a margin of 2rem */
