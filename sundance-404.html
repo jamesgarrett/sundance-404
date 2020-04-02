@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="sundance">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -11,46 +11,67 @@
     <!-- Typekit import for our fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/phe0eyb.css">
     <style>
-      .background,.gradient{height:100vh;width:100%;display:grid;position:fixed;grid-template-columns:3fr 9fr}ul.dropdown-items{min-width:200px}.gradient{grid-template-columns:3fr 3fr 6fr}.bg-black{background:#000}.gradient--layer{background:#000;background:linear-gradient(-90deg,rgba(0,0,0,0) 0,#000 100%)}.background--image{background-image:url(https://media.amc.com/sundancetv_com/404/img/hal_and_leonard.jpg);background-size:cover;background-position:left center}.content{display:flex;flex-direction:column;height:100vh;justify-content:center;z-index:99;color:#fff;position:relative;width:50%}.content .spacer{height:0}button{background-color:#ed6300;padding:10px 15px;color:#fff;cursor:pointer;border:0 solid transparent}button:hover{background-color:#fff;color:#ed6300}@media screen and (max-width:960px){.main-nav div.logo{height:25px}.main-nav div.logo img{height:25px}.background{grid-template-columns:1fr;height:85vh}.background--image{background-position:center center}.background .spacer{display:none}.gradient{grid-template-columns:1fr;grid-template-rows:3fr 3fr 1fr;grid-auto-flow:row;height:85vh}.gradient .bg-black{order:1}.gradient .spacer{order:-1}.gradient--layer{background:linear-gradient(180deg,rgba(0,0,0,0) 0,#000 100%)}.content{width:100%;justify-content:flex-end;height:85vh}.content .spacer{height:3rem}}.browse-nav,.main-nav{display:flex;position:fixed;top:0;width:100%;color:#999}.browse-nav a,.main-nav a{color:#fff}.browse-nav a:hover,.main-nav a:hover{color:#e15d00}.main-nav{background-color:rgba(0,0,0,.6);height:65px;align-items:center;justify-content:space-between;z-index:9999;transition:1s ease-in-out}.main-nav .logo{height:35px}.main-nav .left,.main-nav .right{display:flex;align-items:center;padding:1rem}a,li,p{font-family:var(--font-primary);text-decoration:none;list-style-type:none}ul{padding-left:0}body{margin:0;background:#000}.sundance{margin:0;padding:0;width:100%;height:100vh;overflow-y:hidden}.sundance .headline-1{font-size:var(--fs10);font-family:benton-sans,Helvetica,sans-serif;font-weight:300;text-transform:lowercase;line-height:1.08}.sundance .label-lg{font-family:benton-sans,Helvetica,sans-serif;font-weight:400;line-height:1.5;text-transform:uppercase;letter-spacing:1px}.sundance .button-md{font-family:benton-sans,Helvetica,sans-serif;text-transform:uppercase;font-weight:700;letter-spacing:1.5px}.sundance .body-md,.sundance .button-md{font-size:var(--fs02)}.sundance .body,.sundance .body-lg,.sundance .body-md,.sundance .body-sm,.sundance .body-xl,.sundance .body-xs{font-family:benton-sans,Helvetica,sans-serif;font-weight:400;font-style:normal;line-height:1.43;letter-spacing:normal}.sundance .body-lg,.sundance .label-lg{font-size:var(--fs04)}:root{--fs15:4.25rem;--fs14:4rem;--fs13:3.75rem;--fs12:3.5rem;--fs11:3.25rem;--fs10:3rem;--fs09:2.5rem;--fs08:2.25rem;--fs07:2rem;--fs06:1.75rem;--fs05:1.5rem;--fs04:1.25rem;--fs03:1.125rem;--fs02:1rem;--fs01:0.875rem;--fs00:0.75rem;--m:1rem;--m-small:0.25rem;--m-large:2rem}h1,h2,h3,h4,h5,h6{margin:1rem 0;font-family:var(--font-primary)}html{font-size:calc(10 * 100vw / 320);width:calc(0vw + 100%)}@media screen and (min-width:667px),screen and (min-aspect-ratio:1.4444444444){html{font-size:calc(12 * 100vw / 667)}}@media screen and (min-width:768px){html{font-size:calc(16 * 100vw / 768)}}@media screen and (min-width:1025px){html{font-size:calc(20 * 100vw / 1440)}}@media screen and (min-width:1440px){html{font-size:calc(24 * 100vw / 1920)}}.m-a{margin:var(--m)}.m-t,.m-v{margin-top:var(--m)}.m-b,.m-v{margin-bottom:var(--m)}.m-h,.m-l{margin-left:var(--m)}.m-h,.m-r{margin-right:var(--m)}.m-sm{--m:var(--m-small)}.m-lg{--m:var(--m-large)}.tl{text-align:left}.tc{text-align:center}.tr{text-align:right}.ttu{text-transform:uppercase}.ttc{text-transform:capitalize}.ttl{text-transform:lowercase}@media screen and (max-width:767px){.hidden-sm{display:none!important}}@media screen and (min-width:768px){.hidden-lg{display:none!important}}
+      header{position:fixed;top:0;z-index:999;width:100%;background:#000;display:-ms-grid;display:grid;-ms-grid-columns:50% 50%;grid-template-columns:50% 50%;padding:1vw;box-sizing:border-box;grid-template-areas:"logo nav"}header>.nav{grid-area:nav;justify-self:flex-end;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center}footer{display:-ms-grid;display:grid;-ms-grid-columns:45% 55%;grid-template-columns:45% 55%;-ms-grid-rows:4em auto auto;grid-template-rows:4em auto auto;padding:2vw;grid-template-areas:"logo icons" "nav nav" "logo-train logo-train" "copyright copyright"}footer>.logo,header>.logo{grid-area:logo;justify-self:flex-start;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center}footer>.logo img,header>.logo img{height:36px}footer>.icons{grid-area:icons;justify-self:flex-end;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center}.icon img{opacity:.8;width:1.5rem}.icon:hover img{opacity:1}footer>.nav{grid-area:nav}footer>.nav li{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex}footer>.nav li a,header>.nav li a{color:#fff}footer>.nav li a:hover,header>.nav li a:hover{color:var(--brand-primary)}footer>.logo-train{grid-area:logo-train}footer>.logo-train img{width:100%;max-width:640px}footer>.copyright{grid-area:copyright;color:#fff}a,li,p{font-family:var(--font-primary);text-decoration:none;list-style-type:none}ul{padding-left:0}.background,.gradient{height:100vh;width:100%;display:-ms-grid;display:grid;position:absolute;-ms-grid-columns:3fr 9fr;grid-template-columns:3fr 9fr}.gradient{-ms-grid-columns:3fr 3fr 6fr;grid-template-columns:3fr 3fr 6fr}.bg-black{background:#000}.gradient--layer{background:#000;background:-webkit-linear-gradient(right,rgba(0,0,0,0) 0,#000 100%);background:linear-gradient(-90deg,rgba(0,0,0,0) 0,#000 100%)}.background--image{background-image:url(https://media.amc.com/sundancetv_com/404/img/hal_and_leonard.jpg);background-size:cover;background-position:left center}.content{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:100vh;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;z-index:99;color:#fff;position:relative;width:50%}.content .spacer{height:0}button{background-color:#ed6300;padding:10px 15px;color:#fff;cursor:pointer;border:0 solid transparent}button:hover{background-color:#fff;color:#ed6300}@media screen and (max-width:960px){footer>.logo img,header>.logo img{height:24px}.background{-ms-grid-columns:1fr;grid-template-columns:1fr;height:85vh}.background--image{background-position:center center}.background .spacer{display:none}.gradient{-ms-grid-columns:1fr;grid-template-columns:1fr;-ms-grid-rows:3fr 3fr 1fr;grid-template-rows:3fr 3fr 1fr;grid-auto-flow:row;height:85vh}.gradient .bg-black{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}.gradient .spacer{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.gradient--layer{background:-webkit-linear-gradient(top,rgba(0,0,0,0) 0,#000 100%);background:linear-gradient(180deg,rgba(0,0,0,0) 0,#000 100%)}.content{width:100%;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;height:85vh}.content .spacer{height:3rem}}body{font-family:var(--font-primary);margin:0;background:#000}.display-primary,.display-primary-0,.display-primary-1,.display-primary-2,.display-primary-3,.display-primary-4,.display-primary-5,.display-primary-6,h1,h2,h3,h4,h5,h6{font-family:var(--font-primary);font-weight:300;text-transform:lowercase;letter-spacing:0;line-height:1.08}.display-primary-6,h1{font-size:var(--fs10)}.display-primary-5,h2{font-size:var(--fs09)}.display-primary-4,h3{font-size:var(--fs07)}.display-primary-3,h4{font-size:var(--fs05)}.display-primary-2,h5{font-size:var(--fs04)}.display-primary-1,h6{font-size:var(--fs02)}.display-primary-0{font-size:var(--fs01)}.display-secondary,.display-secondary-0,.display-secondary-1,.display-secondary-2,.display-secondary-3,.display-secondary-4,.display-secondary-5,.display-secondary-6{font-family:var(--font-secondary);font-weight:400;text-transform:uppercase;line-height:1}.display-secondary-6{font-size:var(--fs13)}.display-secondary-5{font-size:var(--fs10)}.display-secondary-4{font-size:var(--fs09)}.display-secondary-3{font-size:var(--fs07)}.display-secondary-2{font-size:var(--fs05)}.display-secondary-1{font-size:var(--fs04)}.display-secondary-0{font-size:var(--fs02)}.display-tertiary,.display-tertiary-1,.display-tertiary-2,.display-tertiary-3,.display-tertiary-4,.display-tertiary-5,.display-tertiary-6{font-family:var(--font-primary);font-weight:400;text-transform:capitalize;line-height:1.08}.display-tertiary-6{font-size:var(--fs10)}.display-tertiary-5{font-size:var(--fs09)}.display-tertiary-4{font-size:var(--fs07)}.display-tertiary-3{font-size:var(--fs05)}.display-tertiary-2{font-size:var(--fs04)}.display-tertiary-1{font-size:var(--fs02)}.display-tertiary-0{font-size:var(--fs01)}.label,.label-lg,.label-md,.label-primary,.label-primary-lg,.label-primary-md,.label-primary-sm,.label-primary-xs,.label-secondary-lg,.label-secondary-md,.label-secondary-sm,.label-secondary-xs,.label-sm,.label-xs{font-family:var(--font-primary);font-weight:400;line-height:1.5;text-transform:uppercase;letter-spacing:1px}.label-primary,.label-primary-lg,.label-primary-md,.label-primary-sm,.label-primary-xs{text-transform:uppercase}.label-secondary,.label-secondary-lg,.label-secondary-md,.label-secondary-sm,.label-secondary-xs{text-transform:capitalize}.button,.button-lg,.button-md,.button-sm,.button-xs{font-family:var(--font-primary);text-transform:uppercase;font-weight:700;letter-spacing:1.5px}.button-lg,.label-lg,.label-primary-lg,.label-secondary-lg{font-size:var(--fs04)}.button-md,.label-md,.label-primary-md,.label-secondary-md{font-size:var(--fs02)}.button-sm,.label-primary-sm,.label-secondary-sm,.label-sm{font-size:var(--fs01)}.button-xs,.label-primary-xs,.label-secondary-xs,.label-xs{font-size:var(--fs00)}.body,.body-lg,.body-md,.body-sm,.body-xl,.body-xs,body,p{font-family:var(--font-primary);font-weight:400;font-style:normal;line-height:1.43;letter-spacing:normal}.body-xl{font-size:var(--fs07)}.body-lg,.body-link-lg{font-size:var(--fs04)}.body-link-md,.body-md,p{font-size:var(--fs02)}.body-link-sm,.body-sm{font-size:var(--fs01)}.body-link-xs,.body-xs{font-size:var(--fs00)}.body-link,.body-link-lg,.body-link-md,.body-link-sm,.body-link-xl,.body-link-xs{color:var(--brand-primary)}:root{--fs15:4.25rem;--fs14:4rem;--fs13:3.75rem;--fs12:3.5rem;--fs11:3.25rem;--fs10:3rem;--fs09:2.5rem;--fs08:2.25rem;--fs07:2rem;--fs06:1.75rem;--fs05:1.5rem;--fs04:1.25rem;--fs03:1.125rem;--fs02:1rem;--fs01:0.875rem;--fs00:0.75rem;--m:1rem;--m-small:0.25rem;--m-large:2rem;--brand-primary:#ed6300;--font-primary:benton-sans,Helvetica,sans-serif;--font-secondary:benton-sans-extra-compressed,oswald,Helvetica,sans-serif}h1,h2,h3,h4,h5,h6{margin:1rem 0;font-family:var(--font-primary)}html{font-size:calc(10 * 100vw / 320);width:calc(0vw + 100%)}@media screen and (min-width:667px),screen and (min-aspect-ratio:1.4444444444){html{font-size:calc(12 * 100vw / 667)}}@media screen and (min-width:768px){html{font-size:calc(16 * 100vw / 768)}}@media screen and (min-width:1025px){html{font-size:calc(20 * 100vw / 1440)}}@media screen and (min-width:1440px){html{font-size:calc(24 * 100vw / 1920)}}.m-a{margin:var(--m)}.m-t,.m-y{margin-top:var(--m)}.m-b,.m-y{margin-bottom:var(--m)}.m-l,.m-x{margin-left:var(--m)}.m-r,.m-x{margin-right:var(--m)}.m-sm{--m:var(--m-small)}.m-lg{--m:var(--m-large)}.tl{text-align:left}.tc{text-align:center}.tr{text-align:right}.ttu{text-transform:uppercase}.ttc{text-transform:capitalize}.ttl{text-transform:lowercase}@media screen and (max-width:767px){.hidden-sm{display:none!important}}@media screen and (min-width:768px){.hidden-lg{display:none!important}}
     </style>
   </head>
 
   <body>
-    <div class="sundance">
-      <header class="main-nav">
-        <div class="left">
-          <!--   Network Logo     -->
-          <div class="logo m-h">
-            <a href="https://sundancetv.com"><img src="https://cdn.amcnetworks.com/sundance/logos/sundance_tv_logo.png" alt="" class="logo"></a>
-          </div>
-          <!--   Primary Nav    -->
-          <ul class="right">
-            <li><a class="button-md" href="https://sundancetv.com/schedule">Schedule</a></li>
-          </ul>
-        </div>
-      </header>
-      <main>
-        <div class="background bg-black">
-          <span class="spacer"></span>
-          <span class="background--image"></span>
-        </div>
-        <span class="gradient">
-          <span class="bg-black"></span>
-          <span class="gradient--layer"></span>
-          <span class="spacer"></span>
-        </span>
-        <div class="content m-l">
-          <span class="label-lg m-l">ERROR - 404</span>
-          <h1 class="headline-1 m-l">Well, that didn't work.</h1>
-          <span class="body-lg m-b m-l">The page you requested could not be found.</span>
-          <a href="https://sundancetv.com"><button class="button-md m-l">Return to Home</button></a>
-          <span class="spacer"></span>
-        </div>
-
-      </main>
-    </div>
+    <header>
+      <a class="logo m-x" href="/"><img class="logo" src="https://cdn.amcnetworks.com/sundance/logos/sundance_tv_logo.png" alt="SundanceTV" ></a>
+      <ul class="nav m-x">
+        <li><a class="button-md" href="https://sundancetv.com/schedule">Schedule</a></li>
+      </ul>
+    </header>
+    <main>
+      <div class="background bg-black">
+        <span class="spacer"></span>
+        <span class="background--image"></span>
+      </div>
+      <span class="gradient">
+        <span class="bg-black"></span>
+        <span class="gradient--layer"></span>
+        <span class="spacer"></span>
+      </span>
+      <div class="content m-l">
+        <span class="label-lg m-l">ERROR - 404</span>
+        <h1 class="display-primary-6 m-l">Well, that didn't work.</h1>
+        <span class="body-lg m-b m-l">The page you requested could not be found.</span>
+        <a href="/"><button class="button-md m-l">Take Me Home</button></a>
+        <span class="spacer"></span>
+      </div>
+    </main>
     <footer>
+        <div class="logo m-x">
+          <a href="/"><img src="https://cdn.amcnetworks.com/sundance/logos/sundance_tv_logo.png" alt="" class="logo"></a>
+        </div>
+        <div class="icons m-x">
+          <a class="icon m-x m-sm fb" href="https://www.facebook.com/sundancetv"><img src="https://media.amc.com/sundancetv_com/404/img/facebook.svg"></a>
+          <a class="icon m-x m-sm twitter" href="https://twitter.com/intent/follow"><img src="https://media.amc.com/sundancetv_com/404/img/twitter.svg"></a>
+          <a class="icon m-x m-sm insta" href="http://www.instagram.com/sundancetv"><img src="https://media.amc.com/sundancetv_com/404/img/instagram.svg"></a>
+          <a class="icon m-x m-sm tumblr" href="http://www.sundancetv.tumblr.com"><img src="https://media.amc.com/sundancetv_com/404/img/tumblr.svg"></a>
+          <a class="icon m-x m-sm youtube" href="http://www.youtube.com/subscription_center?add_user=sundancechannel"><img src="https://media.amc.com/sundancetv_com/404/img/youtube.svg"></a>
+        </div>
+        <ul class="nav">
+          <li><a class="button-sm m-x m-y" href="/ad-sales">Advertise</a></li>
+          <li><a class="button-sm m-x m-y" href="/press">Press</a></li>
+          <li><a class="button-sm m-x m-y" href="/faq">FAQs</a></li>
+          <li><a class="button-sm m-x m-y" href="/career">Careers</a></li>
+          <li><a class="button-sm m-x m-y" href="/newsletter">Newsletter</a></li></br>
+          <li><a class="label-primary-xs m-x m-y" href="/privacy">Privacy</a></li>
+          <li><a class="label-primary-xs m-x m-y" href="/press">Cookies</a></li>
+          <li><a class="label-primary-xs m-x m-y" href="/terms">Terms and Conditions</a></li>
+          <li><a class="label-primary-xs m-x m-y" href="http://www.tvguidelines.org/index.html">TV Parental Guidelines</a></li>
+        </ul>
+        <!-- <div class="logo-train">
+            <img src="img/logo-train.svg" alt="">
+        </div> -->
+        <div class="copyright">
+          <p class="body-xs m-x">Copyright &copy; 2010-<script>
+                  var CurrentYear = new Date().getFullYear()
+                  document.write(CurrentYear)
+              </script> Sundance TV LLC. All rights reserved.
+          </p>
+        </div>
     </footer>
-
   </body>
 </html>
